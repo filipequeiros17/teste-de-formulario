@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styler.css">
+    <title>Formulário de Treino</title>
+
+</head>
+<body>
+    <h1>Formulário de Treino</h1>
+    <form id="treinoForm" action="/enviar_treino" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Objetivos e Histórico</legend>
+            <label for="objetivo">Qual o seu objetivo na academia?</label><br>
+            <select id="objetivo" name="objetivo">
+                <option value="perda_peso">Perda de peso</option>
+                <option value="ganho_massa">Ganho de massa muscular</option>
+                <option value="condicionamento">Condicionamento físico</option>
+                <option value="outro">Outro</option>
+            </select><br><br>
+
+            <label for="tempo">Tempo disponível para treinar (horas/dia):</label>
+            <input type="number" id="tempo" name="tempo" min="0" max="24"><br><br>
+
+            <label for="historico">Histórico de atividade física:</label><br>
+            <select id="historico" name="historico">
+                <option value="sedentario">Sedentário</option>
+                <option value="iniciante">Iniciante</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+                <option value="descricao">descrever</option>
+            </select><br><br>
+            <label for="descricao">Descrição do historico:</label><br>
+            <textarea id="descricao" name="descricao"></textarea>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+    <div id="mensagem"></div>
+    <script src="script.js"></script>
+</body>
+</html>
